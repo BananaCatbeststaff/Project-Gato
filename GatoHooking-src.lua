@@ -1,3 +1,4 @@
+
 -- TrackStats Elite v2.12 - Configuração via getgenv()
 -- Inicializar configurações padrão se não existirem
 if not getgenv().TrackStatsConfig then
@@ -20,6 +21,7 @@ end
 -- Referências locais para melhor performance
 local webhookConfig = getgenv().TrackStatsConfig.webhook
 local settings = getgenv().TrackStatsConfig.settings
+local http_request = http_request or request or (syn and syn.request) or (http and http.request)
 
 -- Serviços do Roblox
 local Players = game:GetService("Players")
